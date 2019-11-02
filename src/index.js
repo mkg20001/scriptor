@@ -52,10 +52,10 @@ module.exports = function scriptor ({ files, showOutput, options, shell }) {
     })
   }
 
-  files = [].concat([
+  files = [].concat(
     files.filter(g => !glob.hasMagic(g)).filter(f => fs.existsSync(f)),
     ...files.filter(g => glob.hasMagic(g)).map(g => glob.sync(g)).filter(r => r.length)
-  ]).map(f => fs.realpathSync(f))
+  ).map(f => fs.realpathSync(f))
 
   const o = {}
 
