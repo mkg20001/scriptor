@@ -1,0 +1,32 @@
+{
+  "name": "scriptor",
+  "template": {
+    "extends": [
+      "node"
+    ]
+  },
+  "version": "0.0.1",
+  "description": "Run scripts like nobody is watching",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -A",
+    "cov": "nyc mocha"
+  },
+  "keywords": [
+    "script",
+    "bash",
+    "scripts",
+    "child_process"
+  ],
+  "author": "Maciej Krüger <mkg20001@gmail.com>",
+  "license": "MPL-2.0",
+  "dependencies": {
+    "bl": "^4.0.0",
+    "camel-case": "^3.0.0"
+  },
+  "devDependencies": {
+    "mkgs-tool": "^0.1.3",
+    "mocha": "*",
+    "nyc": "*"
+  }
+}
