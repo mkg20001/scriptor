@@ -4,15 +4,18 @@ const glob = require('glob')
 const mergeOptions = require('merge-options')
 
 const fs = require('fs')
+const path = require('path')
 const cp = require('child_process')
 const bl = require('bl')
+
+const camelCase = require('camel-case')
 
 module.exports = function scriptor ({ files, showOutput, options, shell }) {
   if (!shell) {
     shell = fs.existsSync('/bin/bash') ? '/bin/bash' : '/bin/sh'
   }
 
-  async function spawn (cmd, ...args) {
+  function spawn (cmd, ...args) {
     const objs = [
       showOutput ? { stdio: 'inherit' } : { stdio: ['pipe', 'pipe', 'inherit'] },
       { shell },
@@ -49,14 +52,21 @@ module.exports = function scriptor ({ files, showOutput, options, shell }) {
     })
   }
 
-  files = files.concat([
+  files = [].concat([
     files.filter(g => !glob.hasMagic(g)).filter(f => fs.existsSync(f)),
     ...files.filter(g => glob.hasMagic(g)).map(g => glob.sync(g)).filter(r => r.length)
-  ])
+  ]).map(f => fs.realpathSync(f))
 
   const o = {}
 
   files.forEach(file => {
+    let name = path.basename(file).split('.')
+    name.pop()
+    name = name.join('.')
+    name = camelCase(name)
 
+    o[name] = (...args) => spawn(file, ...args)
   })
+
+  return o
 }
