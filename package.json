@@ -28,5 +28,16 @@
     "mkgs-tool": "^0.1.3",
     "mocha": "*",
     "nyc": "*"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkg20001/scriptor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkg20001/scriptor/issues"
+  },
+  "homepage": "https://github.com/mkg20001/scriptor#readme"
 }
