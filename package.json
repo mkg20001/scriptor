@@ -1,5 +1,5 @@
 {
-  "name": "scriptor",
+  "name": "scriptrr",
   "template": {
     "extends": [
       "node"
@@ -34,10 +34,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mkg20001/scriptor.git"
+    "url": "git+https://github.com/mkg20001/scriptrr.git"
   },
   "bugs": {
-    "url": "https://github.com/mkg20001/scriptor/issues"
+    "url": "https://github.com/mkg20001/scriptrr/issues"
   },
-  "homepage": "https://github.com/mkg20001/scriptor#readme"
+  "homepage": "https://github.com/mkg20001/scriptrr#readme"
 }
