@@ -11,7 +11,7 @@ code:
 ```js
 const path = require('path')
 const scripts = require('scriptrr')({
-  files: path.join(__dirname, 'scripts'),
+  files: [path.join(__dirname, 'scripts', '*.sh')],
   options: {}
 })
 
