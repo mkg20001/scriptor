@@ -8,7 +8,7 @@ const path = require('path')
 const cp = require('child_process')
 const bl = require('bl')
 
-const camelCase = require('camel-case')
+const camelCase = require('camel-case').camelCase
 
 module.exports = function scriptor ({ files, showOutput, options, shell }) {
   if (!shell) {
