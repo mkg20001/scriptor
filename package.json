@@ -24,15 +24,17 @@
   "license": "MPL-2.0",
   "dependencies": {
     "bl": "^4.0.2",
-    "camel-case": "^4.1.1"
+    "camel-case": "^4.1.1",
+    "glob": "^7.1.6",
+    "merge-options": "^2.0.0"
   },
   "devDependencies": {
-    "mkgs-tool": "^0.1.10",
-    "mocha": "*",
-    "nyc": "*",
     "eslint": "*",
     "eslint-config-aegir-standalone": "*",
-    "eslint-config-oclif": "*"
+    "eslint-config-oclif": "*",
+    "mkgs-tool": "^0.1.10",
+    "mocha": "*",
+    "nyc": "*"
   },
   "directories": {
     "test": "test"

@@ -10,7 +10,7 @@ const bl = require('bl')
 
 const camelCase = require('camel-case').camelCase
 
-module.exports = function scriptor ({ files, showOutput, options, shell }) {
+module.exports = function ({ files, showOutput, options, shell }) {
   if (!shell) {
     shell = fs.existsSync('/bin/bash') ? '/bin/bash' : '/bin/sh'
   }
